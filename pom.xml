@@ -7,7 +7,7 @@
     <groupId>com.honglwan</groupId>
     <artifactId>just-log-it</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <name>just-log-it</name>
     <url>https://github.com/honglwan/just-log-it</url>
@@ -42,6 +42,8 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.deploy.skip>true</maven.deploy.skip>
+
+        <spring.boot.version>2.2.13.RELEASE</spring.boot.version>
     </properties>
 
     <build>
@@ -66,4 +68,21 @@
         </plugins>
     </build>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
 </project>
